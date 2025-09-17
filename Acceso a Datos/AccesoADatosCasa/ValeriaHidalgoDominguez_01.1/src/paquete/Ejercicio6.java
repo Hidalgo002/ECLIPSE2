@@ -24,7 +24,6 @@ public class Ejercicio6 {
             try {
                 if (fichero.createNewFile()) {
                     System.out.println("Fichero creado correctamente.");
-                    // Establecer permisos de solo lectura
                     if (fichero.setWritable(false) && fichero.setExecutable(false)) {
                         System.out.println("Permisos cambiados: ahora es de solo lectura.");
                     } else {
