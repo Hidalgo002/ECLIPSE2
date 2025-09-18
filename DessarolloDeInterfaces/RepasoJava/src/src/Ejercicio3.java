@@ -10,9 +10,7 @@ public class Ejercicio3 {
 			if(arrayE[i]%2 == 0) {
 				n++;
 			}
-			
-			else {System.out.println("No es par");}
-		
+					
 		}
 		
 		System.out.println("Cantidad de números pares: " + n);
