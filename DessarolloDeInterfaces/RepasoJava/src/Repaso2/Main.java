@@ -1,6 +1,8 @@
 package Repaso2;
 
-public class Ejercicio6 {
+import java.util.List;
+
+public class Main {
 	
 	public static void main(String[] args) {
 			Profesor profesor1 = new Profesor("25369W","Alfonso","Domingo",2500,5,true);
@@ -14,15 +16,16 @@ public class Ejercicio6 {
 
 			Modulo modulo1 = new Modulo("Matemáticas", 5, profesor1, false);
 			Modulo modulo2 = new Modulo("Historia", 6, profesor2, true);
+			List<Modulo> listado = (modulo1,modulo2);
 
-			Alumno alumno1 = new Alumno("854751G", "Claudia", "Ferrer", "25-6-99", true, false, modulo1);
-			Alumno alumno2 = new Alumno("858741G", "Carmelo", "Ríos", "6-8-99", false, false, modulo2);
+
+			Alumno alumno1 = new Alumno("854751G", "Claudia", "Ferrer", "25-6-99", true, false, listado);
+			Alumno alumno2 = new Alumno("858741G", "Carmelo", "Ríos", "6-8-99", false, false, listado);
 
 			
 			Profesor[] profesor = {profesor1,profesor2};
 			Administracion[]administracion = {admin1,admin2};
 			Directivo[] directivo = {direct1,direct2};
-			Modulo[] modulo = {modulo1, modulo2};
 			Alumno[] alumno = {alumno1,alumno2};
 			
 			for(Profesor Profesor : profesor){
@@ -37,9 +40,6 @@ public class Ejercicio6 {
 				System.out.println(Directivo.toString());
 			}
 			
-			for(Modulo Modulo : modulo){
-				System.out.println(Modulo.toString());
-			}
 			
 			for(Alumno Alumno : alumno){
 				System.out.println(Alumno.toString());

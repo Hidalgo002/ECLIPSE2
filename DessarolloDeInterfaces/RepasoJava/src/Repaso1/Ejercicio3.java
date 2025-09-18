@@ -1,4 +1,6 @@
-package src;
+package Repaso1;
+
+
 
 /*Ejercicio 3: A partir de un array de enteros, recorrerlo y obtener
 por pantalla la cantidad total de números pares.*/
@@ -19,3 +21,4 @@ public class Ejercicio3 {
 	}
 
 }
+

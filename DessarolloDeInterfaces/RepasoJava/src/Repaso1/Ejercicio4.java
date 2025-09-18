@@ -1,4 +1,4 @@
-package src;
+package Repaso1;
 /* Ejercicio 4: Crear una matriz de enteros de n x n (tamaño lo
 decide el usuario), rellenar con números aleatorios, recorrerla y
 dar la suma de todos sus números.*/

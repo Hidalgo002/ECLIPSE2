@@ -1,4 +1,4 @@
-package src;
+package Repaso1;
 
 /*Ejercicio 5: Calcular el factorial de un número entero positivo a
 través de la recursividad.*/
