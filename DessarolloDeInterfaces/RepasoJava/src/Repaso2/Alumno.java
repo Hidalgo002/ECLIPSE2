@@ -1,27 +1,34 @@
 package Repaso2;
 
 public class Alumno extends Conjunto{
-	String fechaNacimiento;
-	boolean sexo;
-	boolean repetidor;
+	public String fechaNacimiento;
+	public boolean sexo;
+	public boolean repetidor;
 	Modulo modulo;
 	
 	
+	
+
+
 	@Override
 	public String toString() {
-		return "Alumno [DNI=" + DNI + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", fechaNacimiento="
-				+ fechaNacimiento + ", sexo=" + sexo + ", repetidor=" + repetidor + ", modulo=" + modulo + "]";
+		return "Alumno [fechaNacimiento=" + fechaNacimiento + ", sexo=" + sexo + ", repetidor=" + repetidor
+				+ ", modulo=" + modulo + ", dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
 	}
+	
+	
 
 
-	public Alumno(String dNI, String nombre, String apellidos, String fechaNacimiento, boolean sexo, boolean repetidor,
+	public Alumno(String dni, String nombre, String apellidos, String fechaNacimiento, boolean sexo, boolean repetidor,
 			Modulo modulo) {
-		super(dNI, nombre, apellidos);
+		super(dni, nombre, apellidos);
 		this.fechaNacimiento = fechaNacimiento;
 		this.sexo = sexo;
 		this.repetidor = repetidor;
 		this.modulo = modulo;
 	}
+
+
 
 
 	public String getFechaNacimiento() {

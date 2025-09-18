@@ -1,38 +1,53 @@
 package Repaso2;
 
 public class Conjunto {
-	String DNI;
-	String Nombre;
-	String Apellidos;
+	public String dni;
+	public String nombre;
+	public String apellidos;
+	
+
+	@Override
+	public String toString() {
+		return "Conjunto [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
+	}
 	
 	
-	public Conjunto(String dNI, String nombre, String apellidos) {
+	public Conjunto(String dni, String nombre, String apellidos) {
 		super();
-		DNI = dNI;
-		Nombre = nombre;
-		Apellidos = apellidos;
+		this.dni = dni;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
 	}
-	
-	
-	public String getDNI() {
-		return DNI;
+
+
+	public String getDni() {
+		return dni;
 	}
-	public void setDNI(String dNI) {
-		DNI = dNI;
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
+
+
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
+
+
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
+
+
 	public String getApellidos() {
-		return Apellidos;
+		return apellidos;
 	}
+
+
 	public void setApellidos(String apellidos) {
-		Apellidos = apellidos;
+		this.apellidos = apellidos;
 	}
-	
 	
 	
 	

@@ -1,4 +1,7 @@
 package src;
+/* Ejercicio 4: Crear una matriz de enteros de n x n (tamaño lo
+decide el usuario), rellenar con números aleatorios, recorrerla y
+dar la suma de todos sus números.*/
 
 import java.util.Scanner;
 
@@ -20,7 +23,7 @@ public class Ejercicio4 {
 			for(int j = 0; j<matriz.length;j++) {
 				matriz[i][j] = (int)(Math.random()*10);
 				System.out.print(" "+matriz[i][j]);
-				suma = suma+ matriz[i][j];
+				suma = suma + matriz[i][j];
 			}
 			System.out.println( );
 		}

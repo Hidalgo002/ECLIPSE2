@@ -1,21 +1,23 @@
 package Repaso2;
 
 public class Profesor extends Conjunto {
-	int Salario;
-	int numAsignaturas;
-	boolean esTutor;
-	
-	@Override
-	public String toString() {
-		return "Profesor [DNI=" + DNI + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", Salario=" + Salario
-				+ ", numAsignaturas=" + numAsignaturas + ", esTutor=" + esTutor + "]";
-	}
+	public int salario;
+	public int numAsignaturas;
+	public boolean esTutor;
 	
 	
 
-	public Profesor(String dNI, String nombre, String apellidos, int salario, int numAsignaturas, boolean esTutor) {
-		super(dNI, nombre, apellidos);
-		Salario = salario;
+	@Override
+	public String toString() {
+		return "Profesor [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario=" + salario
+				+ ", numAsignaturas=" + numAsignaturas + ", esTutor=" + esTutor + "]";
+	}
+
+	
+	
+	public Profesor(String dni, String nombre, String apellidos, int salario, int numAsignaturas, boolean esTutor) {
+		super(dni, nombre, apellidos);
+		this.salario = salario;
 		this.numAsignaturas = numAsignaturas;
 		this.esTutor = esTutor;
 	}
@@ -23,11 +25,11 @@ public class Profesor extends Conjunto {
 
 
 	public int getSalario() {
-		return Salario;
+		return salario;
 	}
 
 	public void setSalario(int salario) {
-		Salario = salario;
+		this.salario = salario;
 	}
 
 	public int getNumAsignaturas() {
@@ -45,6 +47,8 @@ public class Profesor extends Conjunto {
 	public void setEsTutor(boolean esTutor) {
 		this.esTutor = esTutor;
 	}
+	
+
 
 	
 	

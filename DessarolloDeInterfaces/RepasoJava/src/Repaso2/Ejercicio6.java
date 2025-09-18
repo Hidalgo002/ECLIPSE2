@@ -25,7 +25,7 @@ public class Ejercicio6 {
 			Modulo[] modulo = {modulo1, modulo2};
 			Alumno[] alumno = {alumno1,alumno2};
 			
-			/*for(Profesor Profesor : profesor){
+			for(Profesor Profesor : profesor){
 				System.out.println(Profesor.toString());
 			}
 			
@@ -35,8 +35,15 @@ public class Ejercicio6 {
 			
 			for(Directivo Directivo : directivo){
 				System.out.println(Directivo.toString());
-			}*/
+			}
 			
+			for(Modulo Modulo : modulo){
+				System.out.println(Modulo.toString());
+			}
+			
+			for(Alumno Alumno : alumno){
+				System.out.println(Alumno.toString());
+			}
 			
 				
 	}

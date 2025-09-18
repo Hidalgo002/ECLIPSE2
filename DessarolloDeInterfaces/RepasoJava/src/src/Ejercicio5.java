@@ -1,5 +1,7 @@
 package src;
 
+/*Ejercicio 5: Calcular el factorial de un número entero positivo a
+través de la recursividad.*/
 import java.util.Scanner;
 
 public class Ejercicio5 {

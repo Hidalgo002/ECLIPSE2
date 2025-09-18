@@ -1,8 +1,8 @@
 package Repaso2;
 
 public class Modulo {
-	String nombre;
-	int horas;
+	public String nombre;
+	public int horas;
 	Profesor profesor;
 	
 	boolean convalidable;

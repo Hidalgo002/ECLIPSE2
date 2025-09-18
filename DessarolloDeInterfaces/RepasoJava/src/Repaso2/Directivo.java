@@ -1,48 +1,51 @@
 package Repaso2;
 
 public class Directivo extends Conjunto {
-	int Salario;
-	boolean salesiano;
-	boolean turno;
+	public int salario;
+	public boolean salesiano;
+	public boolean turno;
+	
 	@Override
-	
-	
 	public String toString() {
-		return "Directivo [DNI=" + DNI + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", Salario=" + Salario
+		return "Directivo [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario=" + salario
 				+ ", salesiano=" + salesiano + ", turno=" + turno + "]";
 	}
+
 	
-	
-	
-	
-	public Directivo(String dNI, String nombre, String apellidos, int salario, boolean salesiano, boolean turno) {
-		super(dNI, nombre, apellidos);
-		Salario = salario;
+
+	public Directivo(String dni, String nombre, String apellidos, int salario, boolean salesiano, boolean turno) {
+		super(dni, nombre, apellidos);
+		this.salario = salario;
 		this.salesiano = salesiano;
 		this.turno = turno;
 	}
-
 
 
 
 	public int getSalario() {
-		return Salario;
+		return salario;
 	}
+
 	public void setSalario(int salario) {
-		Salario = salario;
+		this.salario = salario;
 	}
+
 	public boolean isSalesiano() {
 		return salesiano;
 	}
+
 	public void setSalesiano(boolean salesiano) {
 		this.salesiano = salesiano;
 	}
+
 	public boolean isTurno() {
 		return turno;
 	}
+
 	public void setTurno(boolean turno) {
 		this.turno = turno;
 	}
+	
 	
 	
 	
