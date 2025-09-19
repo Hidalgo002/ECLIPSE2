@@ -1,11 +1,12 @@
 
 package paquete;
 
-import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /*ENUNCIADO:
+
 • Utilizando la clase Process Builder, ejecutar el comando ipconfig (recordad
 que al ser un comando se encuentra en el PATH de Windows)
 • Si la ejecución del comando no ha sido satisfactoria se mostrará un mensaje
@@ -33,21 +34,44 @@ en el camino y en las variables de entorno. Podemos lanzarlos donde queramos.
 mencionadas. Habrá que tratar /all como el parámetro del y tratarlo de
 manera diferente al nombre del comando.
 */
+
+
 public class GeneradorProceso {
 	public void ejecutar(String ruta) {
-
+		
 		List<String> nombreArgumentos = new ArrayList<>();
+		
+		if(ruta==null || ruta.isEmpty()) {
+			System.out.println("Falta el nombre del comando.");
+			System.exit(1);//Si falla, saldrá un uno.NUNCA PONER CERO
+		}
 		nombreArgumentos.add(ruta); //Añadimos el primer argumento, la ruta
 		
 		ProcessBuilder pb = new ProcessBuilder(nombreArgumentos);
 		pb.command(nombreArgumentos);
 		
 
+		//llamada a inheritIO()
+		//hace que el proceso herede la E/S estandar del proceso padre
+		//Así podemos ver el resultado del comando, en este caso, el ipconfig
+		
+		pb.inheritIO();
+		
 		try {
-			pb.start();
-		} catch (Exception e) {
+			Process proceso = pb.start();
+			int codigoRetorno = proceso.waitFor();//Esperamos a que se acabe el proceso, y cuando se acaba, se rellena el Codigo de Retorno
+			System.out.println("===================CODIGO DE RETORNO=================  \n El comando devuelve: "+codigoRetorno+"\n======================================================");
+				if(codigoRetorno==0) {
+					System.out.println("Ejecución Correcta.");//Si devuelve cero
+				}
+				else {System.out.println("Ejecución con Errores.");}
+			
+			}
+		catch(IOException e){
+			System.out.println("Ha habido un error catastrofico durante la ejecución del comando.\nINFORMACIÓN ADICIONAL: ");
 			e.printStackTrace();
-		}
+			
+			
+			}
 	}
-
 }
