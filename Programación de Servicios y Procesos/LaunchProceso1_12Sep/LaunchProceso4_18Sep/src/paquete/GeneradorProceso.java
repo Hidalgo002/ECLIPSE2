@@ -74,6 +74,7 @@ public class GeneradorProceso {
 			}
 		catch(InterruptedException e) {
 			System.err.println("Proceso interrumpido");
+			System.exit(3);
 		}
 	}
 }
