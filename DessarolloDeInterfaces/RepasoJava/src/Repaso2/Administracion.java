@@ -1,7 +1,7 @@
 package Repaso2;
 
 public class Administracion extends Conjunto {
-	public int salario;
+
 	public String estudios;
 	public int antiguedad;
 	
@@ -9,28 +9,20 @@ public class Administracion extends Conjunto {
 
 	@Override
 	public String toString() {
-		return "Administracion [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario=" + salario
-				+ ", estudios=" + estudios + ", antiguedad=" + antiguedad + "]";
+		return "Administracion [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos +", estudios=" + estudios + ", antiguedad=" + antiguedad + "]";
 	}
 	
 	
 
-	public Administracion(String dni, String nombre, String apellidos, int salario, String estudios, int antiguedad) {
-		super(dni, nombre, apellidos);
-		this.salario = salario;
+	
+	public Administracion(String dni, String nombre, String apellidos, double salario, String estudios,
+			int antiguedad) {
+		super(dni, nombre, apellidos, salario);
 		this.estudios = estudios;
 		this.antiguedad = antiguedad;
 	}
 
 
-
-	public int getSalario() {
-		return salario;
-	}
-
-	public void setSalario(int salario) {
-		this.salario = salario;
-	}
 
 	public String getEstudios() {
 		return estudios;
@@ -46,6 +38,15 @@ public class Administracion extends Conjunto {
 
 	public void setAntiguedad(int antiguedad) {
 		this.antiguedad = antiguedad;
+	}
+
+
+
+
+	@Override
+	protected double salario() {
+		int getSalario = 0;
+		return getSalario*antiguedad;
 	}
 	
 	

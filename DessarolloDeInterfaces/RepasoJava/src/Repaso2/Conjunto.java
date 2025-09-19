@@ -1,22 +1,24 @@
 package Repaso2;
 
-public class Conjunto {
+public abstract class Conjunto {
 	public String dni;
 	public String nombre;
 	public String apellidos;
-	
+	public double salario;
 
 	@Override
 	public String toString() {
-		return "Conjunto [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
+		return "Conjunto [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario="+salario+"]";
 	}
 	
 	
-	public Conjunto(String dni, String nombre, String apellidos) {
+	public Conjunto(String dni, String nombre, String apellidos, double salario) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
+		this.salario = salario;
+		
 	}
 
 
@@ -48,7 +50,8 @@ public class Conjunto {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
-	
+	/*================================ABSTRACT====================================*/
+	protected abstract double salario();
 	
 	
 }

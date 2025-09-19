@@ -1,4 +1,4 @@
-package Repaso2;
+/*package Repaso2;
 
 import java.util.List;
 
@@ -75,4 +75,4 @@ public class Alumno extends Conjunto{
 	
 	
 	
-}
+}*/

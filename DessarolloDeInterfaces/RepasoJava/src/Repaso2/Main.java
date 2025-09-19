@@ -1,6 +1,6 @@
 package Repaso2;
 
-import java.util.List;
+//import java.util.List;
 
 public class Main {
 	
@@ -14,19 +14,19 @@ public class Main {
 			Directivo direct1 = new Directivo("287450Q", "Pablo", "Elche",1000, true, false);
 			Directivo direct2 = new Directivo("287960Q", "María", "Gallego",1900, false, true);
 
-			Modulo modulo1 = new Modulo("Matemáticas", 5, profesor1, false);
+			/*Modulo modulo1 = new Modulo("Matemáticas", 5, profesor1, false);
 			Modulo modulo2 = new Modulo("Historia", 6, profesor2, true);
 			List<Modulo> listado = (modulo1,modulo2);
 
 
 			Alumno alumno1 = new Alumno("854751G", "Claudia", "Ferrer", "25-6-99", true, false, listado);
-			Alumno alumno2 = new Alumno("858741G", "Carmelo", "Ríos", "6-8-99", false, false, listado);
+			Alumno alumno2 = new Alumno("858741G", "Carmelo", "Ríos", "6-8-99", false, false, listado);*/
 
 			
 			Profesor[] profesor = {profesor1,profesor2};
 			Administracion[]administracion = {admin1,admin2};
 			Directivo[] directivo = {direct1,direct2};
-			Alumno[] alumno = {alumno1,alumno2};
+			//Alumno[] alumno = {alumno1,alumno2};
 			
 			for(Profesor Profesor : profesor){
 				System.out.println(Profesor.toString());
@@ -41,9 +41,9 @@ public class Main {
 			}
 			
 			
-			for(Alumno Alumno : alumno){
+		/*	for(Alumno Alumno : alumno){
 				System.out.println(Alumno.toString());
-			}
+			}*/
 			
 				
 	}
