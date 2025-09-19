@@ -70,8 +70,10 @@ public class GeneradorProceso {
 		catch(IOException e){
 			System.out.println("Ha habido un error catastrofico durante la ejecución del comando.\nINFORMACIÓN ADICIONAL: ");
 			e.printStackTrace();
-			
-			
+			System.exit(2);		
 			}
+		catch(InterruptedException e) {
+			System.err.println("Proceso interrumpido");
+		}
 	}
 }
